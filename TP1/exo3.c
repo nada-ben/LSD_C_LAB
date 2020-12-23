@@ -4,7 +4,7 @@
 
 float *lu(float A[N][N], float B[N], int n)
 {
-/*elimination par gauss
+/*elimination par gauss*/
   for(int k=0;k<n;k++)
   {
      for(int i=k+1;i<n;i++)
@@ -16,7 +16,7 @@ float *lu(float A[N][N], float B[N], int n)
         }
      }
    }
- /*calcul de LY=B
+ /*calcul de LY=B*/
  Y[0] = B[0];
  for(int i=1; i<n; i++)
  {
@@ -27,7 +27,7 @@ float *lu(float A[N][N], float B[N], int n)
        }
      X[i]=(Y[i]-s) / A[i][i];
   }
- /*calcul de X avec UX=Y
+ /*calcul de X avec UX=Y*/
  X[n-1]=Y[n-1]/A[n-1][n-1];
  for(int i=n-2; i>=0; i--)
  {
